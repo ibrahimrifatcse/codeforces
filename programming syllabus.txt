@@ -1,0 +1,497 @@
+IOI syllabus
+
+Categories
+Implementation; vectors and sets
+Binary search
+Prime sieve; prime check in O(sqrt(N))
+Dynamic Programming - Fibonacci numbers, prefix sums
+Sorting
+Greedy
+Ad-hoc
+Graphs - graph representation, BFS, DFS, trees
+Geometry - distance between two points
+Bitmasks
+Two pointers, sliding window
+Data structures - sqrt decomposition, segment trees, Fenwick/BIT, persistent structures, Policy-Based-DS, treaps, BST
+Ternary search
+Interactive problems
+LIS
+LCS
+Maths
+Number theory
+Combinatorics, probability, EV
+Find & Union
+Game theory - NIM, Grundy
+Hashing
+Strings - KMP, Z
+Geometry - cross product, convex hull
+Matrix exponentiation
+Divide & Conquer
+DP optimizations
+Graphs - Dijkstra, FW, SCC, bridges, matching, flows
+Randomized algorithms
+TRIE
+Trees - bottom-up dp, LCA, Centroid decomposition, HLD, DSU
+2-SAT
+Strings - suffix arrays
+Constructive algorithms
+Expression parsing
+Meet in the middle
+FFT
+Chinese remainder theorem
+Gaussian elimination
+Difference array, binary lifting
+
+Mathematics
+5.1 Arithmetics and Geometry
+✓ Integers, operations (incl. exponentiation), comparison
+✓ Basic properties of integers (sign, parity, divisibility)
+✓ Basic modular arithmetic: addition, subtraction,
+multiplication
+✓p Prime numbers
+✓ Fractions, percentages
+✓ Line, line segment, angle, triangle, rectangle, square, circle
+✓ Point, vector, coordinates in the plane
+✓ Polygon (vertex, side/edge, simple, convex, inside, area)
+✓q Euclidean distances
+✓p Pythagorean theorem
+✗ä Additional topics from number theory.
+✗ geometry in 3D or higher dimensional spaces
+✗ analyzing and increasing precision of floating-point
+computations
+✗ modular division and inverse elements
+The IOI Syllabus – Version 2020 6
+✗ complex numbers,
+✗ general conics (parabolas, hyperbolas, ellipses)
+✗ trigonometric functions
+5.2 Discrete Structures (DS)
+DS1. Functions, relations, and sets
+✓q Functions (surjections, injections, inverses, composition)
+✓q Relations (reflexivity, symmetry, transitivity, equivalence
+relations, total/linear order relations, lexicographic order)
+✓q Sets (inclusion/exclusion, complements, Cartesian products,
+power sets)
+✗ Cardinality and countability (of infinite sets)
+DS2. Basic logic
+✓ First-order logic
+✓ Logical connectives (incl. their basic properties)
+✓ Truth tables
+✓ Universal and existential quantification (Note: statements
+should avoid definitions with nested quantifiers whenever
+possible.)
+✓p Modus ponens and modus tollens
+? Normal forms
+✗ Validity
+✗ Limitations of predicate logic
+DS3. Proof techniques
+✓q Notions of implication, converse, inverse, contrapositive,
+negation, and contradiction
+✓p Direct proofs, proofs by: counterexample, contraposition,
+contradiction
+✓p Mathematical induction
+✓p Strong induction (also known as complete induction)
+✓ Recursive mathematical definitions (incl. mutually recursive definitions)
+The IOI Syllabus – Version 2020 7
+DS4. Basics of counting
+✓ Counting arguments (sum and product rule, arithmetic and
+geometric progressions, Fibonacci numbers)
+✓q Permutations and combinations (basic definitions)
+✓q Factorial function, binomial coefficients
+✓p Inclusion-exclusion principle
+✓p Pigeonhole principle
+✓p Pascal’s identity, Binomial theorem
+✗ Solving of recurrence relations
+✗ Burnside lemma
+DS5. Graphs and trees
+✓q Trees and their basic properties, rooted trees
+✓q Undirected graphs (degree, path, cycle, connectedness, Euler/Hamilton path/cycle, handshaking lemma)
+✓q Directed graphs (in-degree, out-degree, directed path/cycle,
+Euler/Hamilton path/cycle)
+✓q Spanning trees
+✓q Traversal strategies
+✓q ‘Decorated’ graphs with edge/node labels, weights, colors
+✓q Multigraphs, graphs with self-loops
+✓q Bipartite graphs
+✓p Planar graphs
+✗ Hypergraphs
+✗ Specific graph classes such as perfect graphs
+✗ Structural parameters such as treewidth and expansion
+✗ Planarity testing
+✗ Finding separators for planar graphs
+DS6. Discrete probability
+Applications where everything is finite (and thus arguments about
+probability can be easily turned into combinatorial arguments)
+are ?, everything more complicated is ✗.
+The IOI Syllabus – Version 2020 8
+5.3 Other Areas in Mathematics
+✗ Geometry in three or more dimensions.
+✗ Linear algebra, including (but not limited to):
+– Matrix multiplication, exponentiation,
+inversion, and Gaussian elimination
+– Fast Fourier transform
+✗ Calculus
+✗ Theory of combinatorial games, e.g., NIM game, SpragueGrundy theory
+✗ Statistics
+6 Computing Science
+6.1 Programming Fundamentals (PF)
+PF1. Fundamental programming constructs(for abstract machines)
+✓ Basic syntax and semantics of a higher-level language (at
+least one of the specific languages available at an IOI, as
+announced in the Competition Rules for that IOI)
+✓ Variables, types, expressions, and assignment
+✓ Simple I/O
+✓ Conditional and iterative control structures
+✓ Functions and parameter passing
+✓p Structured decomposition
+PF2. Algorithms and problem-solving
+✓p Problem-solving strategies (understand–plan–do–check, separation of concerns, generalization, specialization, case distinction, working backwards, etc.)9
+✓p The role of algorithms in the problem-solving process
+✓p Implementation strategies for algorithms (also see §7 SE1)
+✓p Debugging strategies (also see §7 SE3)
+✓q The concept and properties of algorithms (correctness, efficiency)
+9See G. Polya: How to Solve It: A New Aspect of Mathematical Method, Princeton
+Univ. Press, 1948
+The IOI Syllabus – Version 2020 9
+PF3. Fundamental data structures
+✓ Primitive types (boolean, signed/unsigned integer, character)
+✓ Arrays (incl. multicolumn dimensional arrays)
+✓ Strings and string processing
+✓q Static and stack allocation (elementary automatic memory
+management)
+✓q Linked structures
+✓q Implementation strategies for graphs and trees
+✓q Strategies for choosing the right data structure
+✓p Elementary use of real numbers in numerically stable tasks
+✓p The floating-point representation of real numbers, the existence of precision issues.10
+✓p Pointers and references
+? Data representation in memory,
+? Heap allocation,
+? Runtime storage management,
+? Using fractions to perform exact calculations.
+✗ Non-trivial calculations on floating point numbers, manipulating precision errors
+Regarding floating point numbers, there are well-known reasons
+why they should be, in general, avoided at the IOI.11 However,
+the currently used interface removes some of those issues. In
+particular, it should now be safe to use floating point numbers in
+some types of tasks – e.g., to compute some Euclidean distances
+and return the smallest one.
+PF4. Recursion
+✓ The concept of recursion
+✓ Recursive mathematical functions
+10Whenever possible, avoiding floating point computations completely is the preferred
+solution.
+11See G. Horv´ath and T. Verhoeff: Numerical Difficulties in Pre-University Education
+and Competitions, Informatics in Education 2:21–38, 2003
+The IOI Syllabus – Version 2020 10
+✓ Simple recursive procedures (incl. mutual recursion)
+✓p Divide-and-conquer strategies
+✓p Implementation of recursion
+✓p Recursive backtracking
+PF5. Event-driven programming
+Some competition tasks may involve a dialog with a reactive environment. Implementing such an interaction with the provided
+environment is ✓q.
+Everything not directly related to the implementation of reactive
+tasks is ?.
+6.2 Algorithms and Complexity (AL)
+We quote from the IEEE-CS Curriculum:
+Algorithms are fundamental to computer science and software engineering.
+The real-world performance of any software system depends only on two
+things: (1) the algorithms chosen and (2) the suitability and efficiency of
+the various layers of implementation. Good algorithm design is therefore
+crucial for the performance of all software systems. Moreover, the study of
+algorithms provides insight into the intrinsic nature of the problem as well
+as possible solution techniques independent of programming language,
+programming paradigm, computer hardware, or any other implementation
+aspect.
+AL1. Basic algorithmic analysis
+✓q Algorithm specification, precondition, postcondition, correctness, invariants
+✓p Asymptotic analysis of upper complexity bounds (informally if possible)
+✓p Big O notation
+✓p Standard complexity classes: constant, logarithmic, linear,
+O(n log n), quadratic, cubic, exponential, etc.
+✓p Time and space tradeoffs in algorithms
+✓p Empirical performance measurements.
+? Identifying differences among best, average, and worst case
+behaviors,
+The IOI Syllabus – Version 2020 11
+? Little o, Omega, and Theta notation,
+? Tuning parameters to reduce running time, memory consumption or other measures of performance
+✗ Asymptotic analysis of average complexity bounds
+✗ Using recurrence relations to analyze recursive algorithms
+AL2. Algorithmic strategies
+✓p Simple loop design strategies
+✓p Brute-force algorithms (exhaustive search)
+✓p Greedy algorithms
+✓p Divide-and-conquer
+✓p Backtracking (recursive and non-recursive), Branch-andbound
+✓p Dynamic programming12
+? Heuristics
+? Finding good features for machine learning tasks13
+? Discrete approximation algorithms
+? Randomized algorithms.
+✗ Clustering algorithms (e.g. k-means, k-nearest neighbor)
+✗ Minimizing multi-variate functions using numerical approaches.
+AL3a. Algorithms
+✓p Simple algorithms involving integers: radix conversion, Euclid’s algorithm, primality test by O(
+√
+n) trial division,
+Sieve of Eratosthenes, factorization (by trial division or a
+sieve), efficient exponentiation
+✓p Simple operations on arbitrary precision integers (addition,
+subtraction, simple multiplication)14
+✓p Simple array manipulation (filling, shifting, rotating, reversal, resizing, minimum/maximum, prefix sums, histogram,
+bucket sort)
+12The IEEE-CS Curriculum puts this under AL8, but we believe it belongs here.
+13E.g., finding a good way to classify images in the IOI 2013 Art class problem.
+14The necessity to implement these operations should be obvious from the problem
+statement.
+The IOI Syllabus – Version 2020 12
+✓p Simple string algorithms (e.g., naive substring search)
+✓p sequential processing/search and binary search
+✓p Quicksort and Quickselect to find the k-th smallest element.
+✓p O(n log n) worst-case sorting algorithms (heap sort, merge
+sort)
+✓p Traversals of ordered trees (pre-, in-, and post-order)
+✓p Depth- and breadth-first traversals
+✓p Applications of the depth-first traversal tree, such as topological ordering and Euler paths/cycles
+✓p Finding connected components and transitive closures.
+✓p Shortest-path algorithms (Dijkstra, Bellman-Ford, FloydWarshall)
+✓p Minimum spanning tree (Jarn´ık-Prim and Kruskal algorithms)
+✓p O(V E) time algorithm for computing maximum bipartite
+matching.
+✓p Biconnectivity in undirected graphs (bridges, articulation
+points).
+✓p Connectivity in directed graphs (strongly connected components).
+✓p Basics of combinatorial game theory, winning and losing
+positions, minimax algorithm for optimal game playing
+✗ä Maximum flow. Flow/cut duality theorem.
+✗ Optimization problems that are easiest to analyze using
+matroid theory. Problems based on matroid intersecions
+(except for bipartite matching).
+✗ Lexicographical BFS, maximum adjacency search and their
+properties
+AL3b. Data structures
+✓q Stacks and queues
+✓p Representations of graphs (adjacency lists, adjacency matrix)
+✓q Binary heap data structures
+✓p Representation of disjoint sets: the Union-Find data structure.
+The IOI Syllabus – Version 2020 13
+✓q Statically balanced binary search trees. Instances of this include binary index trees (also known as Fenwick trees) and
+segment trees (also known as interval trees and tournament
+trees).15
+✓p Balanced binary search trees16
+✓q Augmented binary search trees
+✓p O(log n) time algorithms for answering lowest common ancestor queries in a static rooted tree.17
+✓p Creating persistent data structures by path copying.
+✓p Nesting of data structures, such as having a sequence of
+sets.
+✓q Tries
+✗ä String algorithms and data structures: there is evidence
+that the inter-reducibility between KMP, Rabin-Karp hashing, suffix arrays/tree, suffix automaton, and Aho-Corasick
+makes them difficult to separate.
+✗ä Heavy-light decomposition and separator structures for static
+trees.
+✗ä Data structures for dynamically changing trees and their
+use in graph algorithms.
+✗ Complex heap variants such as binomial and Fibonacci heaps,
+✗ Using and implementing hash tables (incl. strategies to
+resolve collisions)
+✗ Two-dimensional tree-like data structures (such as a 2D
+statically balanced binary tree or a treap of treaps) used
+for 2D queries.
+✗ Fat nodes and other more complicated ways of implementing persistent data structures.
+AL4. Distributed algorithms
+This entire section is ?.
+15Not to be confused with similarly-named data structures used in computational geometry.
+16Problems will not be designed to distinguish between the implementation of BBSTs,
+such as treaps, splay trees, AVL trees, or scapegoat trees
+17Once again, different implementations meeting this requirement will not be distinguished.
+The IOI Syllabus – Version 2020 14
+AL5. Basic computability
+All topics related to computability are ✗. This includes the
+following: Tractable and intractable problems; Uncomputable
+functions; The halting problem; Implications of uncomputability.
+However, see AL7 for basic computational models.
+AL6. The complexity classes P and NP
+Topics related to non-determinism, proofs of NP-hardness (reductions), and everything related is ✗.
+Note that this section only covers the results usually contained
+in undergraduate and graduate courses on formal languages and
+computational complexity. The classification of these topics as
+✗ does not mean that an NP-hard problem cannot appear at an
+IOI.
+AL7. Automata and grammars
+✓q Understanding a simple grammar in Backus-Naur form
+? Formal definition and properties of finite-state machines,
+? Context-free grammars and related rewriting systems,
+? Regular expressions
+✗ Properties other than the fact that automata are graphs
+and that grammars have parse trees.
+AL8. Advanced algorithmic analysis
+✓p Amortized analysis.
+? Online algorithms
+? Randomized algorithms
+✗ Alpha-beta pruning
+AL9. Cryptographic algorithms
+This entire section is ?.
+The IOI Syllabus – Version 2020 15
+AL10. Geometric algorithms
+In general, the ISC has a strong preference towards problems
+that can be solved using integer arithmetics to avoid precision
+issues. This may include representing some computed values as
+exact fractions, but extensive use of such fractions in calculations
+is discouraged.
+Additionally, if a problem uses two-dimensional objects, the ISC
+prefers problems in which such objects are rectilinear.
+✓p Representing points, vectors, lines, line segments.
+✓p Checking for collinear points, parallel/orthogonal vectors
+and clockwise turns (for example, by using dot products
+and cross products).
+✓p Intersection of two lines.
+✓p Computing the area of a polygon from the coordinates of
+its vertices.18
+✓p Checking whether a (general/convex) polygon contains a
+point.
+✓p Coordinate compression.
+✓p O(n log n) time algorithms for convex hull
+✓p Sweeping line method
+✗ Point-line duality
+✗ Halfspace intersection, Voronoi diagrams, Delaunay triangulations.
+✗ Computing coordinates of circle intersections against lines
+and circles.
+✗ Linear programming in 3 or more dimensions and its geometric interpretations.
+✗ Center of mass of a 2D object.
+✗ Computing and representing the composition of geometric
+transformations if the knowledge of linear algebra gives an
+advantage.
+AL11. Parallel algorithms
+This entire section is ?.
+18The recommended way of doing so is to use cross products or an equivalent formula.
+TODO url
+The IOI Syllabus – Version 2020 16
+6.3 Other Areas in Computing Science
+Except for GV (specified below), all areas are ✗.
+AR. Architecture and Organization
+OS. Operating Systems
+NC. Net-Centric Computing (a.k.a. cloud computing)
+PL. Programming Languages
+HC. Human-Computer Interaction
+GV. Graphics and Visual Computing
+Basic aspects of processing graphical data are ?, everything else (including the use of graphics libraries such as
+OpenGL) is ✗.
+IS. Intelligent Systems
+IM. Information Management
+SP. Social and Professional Issues
+CN. Computational Science
+Notes: AR is about digital systems, assembly language, instruction pipelining, cache memories, etc. OS is about the design of
+operating systems, not their usage. PL is about the analysis and
+design of programming languages, not their usage. HC is about
+the design of user interfaces.
+Usage of the operating system, GUIs and programming languages is covered in §8 and §6.1.
+7 Software Engineering (SE)
+We quote from the IEEE-CS Curriculum:
+Software engineering is the discipline concerned with the application of theory,
+knowledge, and practice for effectively and efficiently building software systems
+that satisfy the requirements of users and customers.
+In the IOI competition, the application of software engineering
+concerns the use of light-weight techniques for small, one-off,
+single-developer projects under time pressure. All included topics are ✓p.
+The IOI Syllabus – Version 2020 17
+SE1. Software design
+✓p Fundamental design concepts and principles
+✓p Design patterns
+✓p Structured design
+In particular, contestants may be expected to
+– Transform an abstract algorithm into a concrete, efficient
+program expressed in one of the allowed programming languages, possibly using standard or competition-specific libraries.
+– Make their programs read data from and write data to text
+files according to a prescribed simple format
+✗ Software architecture,
+✗ Design for reuse,
+✗ Object-Oriented analysis and design,
+✗ Component-level design
+SE2. Using APIs
+✓p API (Application Programming Interface) programming
+In particular, contestants may be expected to
+– Use competition-specific libraries according to the provided
+specification.
+✗ Programming by example,
+✗ Debugging in the API environment,
+✗ Class browsers and related tools,
+✗ Introduction to component-based computing
+SE3. Software tools and environments
+✓p Programming environments, incl. IDE (Integrated Development Environment)
+In particular, contestants may be expected to
+The IOI Syllabus – Version 2020 18
+– Write and edit program texts using one of the provided
+program editors.
+– Compile and execute their own programs.
+– Debug their own programs.
+✗ Testing tools,
+✗ Configuration management tools
+✗ Requirements analysis and design modeling tools,
+✗ Tool integration mechanisms
+SE4. Software processes
+✓p Software life-cycle and process models
+In particular, contestants may be expected to
+– Understand the various phases in the solution development
+process and select appropriate approaches.
+✗ Process assessment models,
+✗ Software process metrics
+SE5. Software requirements and specification
+✓p Functional and nonfunctional requirements
+✓p Basic concepts of formal specification techniques
+In particular, contestants may be expected to
+– Transform a precise natural-language description (with or
+without mathematical formalism) into a problem in terms
+of a computational model, including an understanding of
+the efficiency requirements.
+✗ Prototyping,
+✗ Requirements elicitation,
+✗ Requirements analysis modeling techniques
+The IOI Syllabus – Version 2020 19
+SE6. Software validation
+✓p Testing fundamentals, including test plan creation and test
+case generation
+✓p Black-box and white-box testing techniques
+✓p Unit, integration, validation, and system testing
+✓p Inspections
+In particular, contestants may be expected to
+– Apply techniques that maximize the the opportunity to detect common errors (e.g. through well-structured code, code
+review, built-in tests, test execution).
+– Test (parts of) their own programs.
+✗ Validation planning,
+✗ Object-oriented testing
+SE7. Software evolution
+✗ Software maintenance,
+✗ Characteristics of maintainable software,
+✗ Re-engineering,
+✗ Legacy systems,
+✗ Software reuse
+SE8. Software project management
+✓p Project scheduling (especially time management)
+✓p Risk analysis
+✓p Software configuration management
+In particular, contestants may be expected to
+– Manage time spent on various activities.
+– Weigh risks when choosing between alternative approaches.
+– Keep track of various versions and their status while developing solutions.
+✗ Software quality assurance,
+✗ Team management,
+✗ Software measurement and estimation techniques,
+✗ Project management tools
+The IOI Syllabus – Version 2020 20
+SE9. Component-based computing
+This entire section is ✗.
+SE10. Formal methods
+✓p Formal methods concepts (notion of correctness proof, invariant)
+✓p Pre and post assertions
+In particular, contestants may be expected to
+– Reason about the correctness and efficiency of algorithms
+and programs.
+✗ Formal verification,
+✗ Formal specification languages,
+✗ Executable and non-executable specifications
+SE11. Software reliability
+This entire section is ✗.
+SE12. Specialized systems development
+This entire section is ✗.
